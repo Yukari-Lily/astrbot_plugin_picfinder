@@ -1,0 +1,92 @@
+{
+  "prioritize_google_lens": {
+    "type": "bool",
+    "description": "优先展示 Google Lens 视觉完全匹配项与平台来源",
+    "default": true
+  },
+  "enable_ai_enhancement": {
+    "type": "bool",
+    "description": "启用多模态 AI 画面分析与全网来源综合智能提炼",
+    "default": true
+  },
+  "ai_fallback_search": {
+    "type": "bool",
+    "description": "当搜图引擎未找到原图时，由 AI 识别画面特征/水印/角色并全网联网搜索出处与动态",
+    "default": true
+  },
+  "saucenao_api_key": {
+    "type": "string",
+    "description": "SauceNAO API Key (可选，申请地址: https://saucenao.com/user.php)",
+    "default": ""
+  },
+  "saucenao_threshold": {
+    "type": "float",
+    "description": "SauceNAO 相似度阈值 (0-100)，达到此阈值视为二次元高确信度原图",
+    "default": 70.0
+  },
+  "enable_ascii2d": {
+    "type": "bool",
+    "description": "是否启用 Ascii2D 兜底检索（内置反 403 客户端：CSRF token + 会话 cookie + 浏览器指纹 + 过盾）",
+    "default": true
+  },
+  "ascii2d_proxy": {
+    "type": "string",
+    "description": "Ascii2D 专用代理（建议日本/住宅线路，留空则跟随全局 proxy；Ascii2D 对机房 IP 风控很严）",
+    "default": ""
+  },
+  "ascii2d_ss_uri": {
+    "type": "string",
+    "description": "内置 Shadowsocks 节点来源，支持四种写法：ss:// 链接、Clash JSON/YAML（含 proxies 列表）、sing-box JSON（outbounds）、base64 订阅。填了插件会自己在本地起代理口，Ascii2D 流量全走这条隧道，优先于 ascii2d_proxy",
+    "default": ""
+  },
+  "ascii2d_ss_node": {
+    "type": "string",
+    "description": "多节点配置时按名字子串挑选节点（如 jp-res、01）；留空取第一个 shadowsocks 节点",
+    "default": ""
+  },
+  "ascii2d_cookie": {
+    "type": "string",
+    "description": "Ascii2D 站点 Cookie（浏览器 F12 复制 cf_clearance=...; _session_id=... 整串，可留空；命中 403 时最有效）",
+    "default": ""
+  },
+  "ascii2d_browser_fallback": {
+    "type": "bool",
+    "description": "触发 Cloudflare 人机校验时用 Playwright 真浏览器过盾（需自行安装 playwright，未装则自动跳过）",
+    "default": true
+  },
+  "ascii2d_bovw": {
+    "type": "bool",
+    "description": "色调检索结果不足时补充一次 bovw 特征检索（裁剪/改色图更容易命中）",
+    "default": true
+  },
+  "enable_tracemoe": {
+    "type": "bool",
+    "description": "是否启用 TraceMoe 动漫画面帧识别（用于动漫截图找第几集几分几秒）",
+    "default": true
+  },
+  "proxy": {
+    "type": "string",
+    "description": "HTTP/SOCKS5 网络代理（如 http://127.0.0.1:7890，留空则直连）",
+    "default": ""
+  },
+  "max_results": {
+    "type": "int",
+    "description": "每个平台或引擎展示的最大候选结果条数",
+    "default": 3
+  },
+  "show_thumbnails": {
+    "type": "bool",
+    "description": "是否在结果中包含缩略图",
+    "default": true
+  },
+  "triggers": {
+    "type": "list",
+    "description": "触发搜图的命令列表",
+    "items": {
+      "type": "string"
+    },
+    "default": [
+      "识图"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+name: astrbot_plugin_picfinder
+display_name: AI 增强全网识图 (Google Lens / SauceNAO / 多平台)
+desc: 基于 Google Lens、SauceNAO、Ascii2D 与多模态 AI 赋能的跨平台以图搜图插件，优先识别 X、B站、YouTube、Pixiv 等多平台原始来源
+author: Yukari Lily
+version: "1.2.0"
+repo: https://github.com/Yukari-Lily/astrbot_plugin_picfinder

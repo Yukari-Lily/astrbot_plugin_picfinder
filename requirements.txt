@@ -1,0 +1,7 @@
+PicImageSearch>=3.8.0
+httpx[http2]>=0.25.0
+curl_cffi>=0.7.0
+pillow>=9.0.0
+pydantic>=2.0.0
+# 可选：内置 Shadowsocks 隧道的 AEAD 加速后端。不装也能跑（自动退回纯 Python 实现）
+# cryptography>=42
