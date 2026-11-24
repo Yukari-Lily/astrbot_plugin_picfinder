@@ -1,0 +1,6 @@
+httpx[http2,socks]>=0.25.0
+curl_cffi>=0.16.0
+pillow>=9.0.0
+playwright>=1.40.0
+pyyaml>=6.0.0
+cryptography>=42.0.0

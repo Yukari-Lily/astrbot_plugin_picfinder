@@ -1,0 +1,6 @@
+name: astrbot_plugin_picfinder
+display_name: 精确识图 (Google Lens / Yandex / SauceNAO)
+desc: 先看 Google Lens 完全匹配，再用 Yandex 收录页与 SauceNAO 交叉核对，多指纹验证同一张图后给出最可信的原出处；内置通用浏览器工具，不依赖多模态模型
+author: Yukari Lily
+version: "1.0"
+repo: https://github.com/Yukari-Lily/astrbot_plugin_picfinder

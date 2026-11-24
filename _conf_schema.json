@@ -1,0 +1,27 @@
+{
+  "proxy": {
+    "type": "text",
+    "description": "搜图出口：填一个 HTTP/SOCKS5 URL，或一条 Clash 节点（ss / trojan）。不需要多节点，多个只取第一个",
+    "default": ""
+  },
+  "browser_tools_proxy": {
+    "type": "string",
+    "description": "浏览器工具出口：inherit=跟随 proxy，direct=直连，或填 http/socks5 URL",
+    "default": "inherit"
+  },
+  "saucenao_api_key": {
+    "type": "string",
+    "description": "SauceNAO API Key（可选；不填走网页版，容易限流）",
+    "default": ""
+  },
+  "browser_profile_dir": {
+    "type": "string",
+    "description": "搜图浏览器的持久化目录，用于保存 Lens Cookie；留空用临时目录，工具浏览器不使用",
+    "default": ""
+  },
+  "batch_timeout": {
+    "type": "int",
+    "description": "发出「发，快发喵」后等第一张图的秒数；之后每张图也重新按这个时间计时",
+    "default": 60
+  }
+}
